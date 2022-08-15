@@ -20,7 +20,7 @@ class Scoreboard(
             }
             objective.getScore("남은 생존자: ${ChatColor.GREEN}${game.getPlayerCount()}명").score = 4
             objective.getScore("  ").score = 3
-            objective.getScore("처치 횟수: ${ChatColor.GREEN}${game.getKills(it)}회".replace("null", "0")).score = 2
+            objective.getScore("킬: ${ChatColor.GREEN}${game.getKills(it)}회".replace("null", "0")).score = 2
             objective.getScore(" ").score = 1
             objective.getScore("좌표: ${ChatColor.GREEN}${it.location.x.toInt()}, ${it.location.y.toInt()}, ${it.location.z.toInt()}").score = 0
             it.scoreboard = scoreboard

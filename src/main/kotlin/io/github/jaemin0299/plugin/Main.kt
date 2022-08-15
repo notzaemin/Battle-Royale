@@ -10,7 +10,7 @@ class Main: JavaPlugin() {
     override fun onEnable() {
         val game = Game(this)
         server.pluginManager.registerEvents(Event(game), this)
-        server.scheduler.runTaskTimer(this, Scoreboard(server, game), 0, 1)
+        server.scheduler.runTaskTimer(this, Scoreboard(server, game), 0, 10L)
         game.worldSetup()
         kommand {
             register("game") {
