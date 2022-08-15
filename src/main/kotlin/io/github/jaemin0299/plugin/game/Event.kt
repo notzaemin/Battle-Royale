@@ -61,10 +61,12 @@ class Event(
     }
     @EventHandler
     private fun playerPortalEvent(event: PlayerPortalEvent) {
+        /*
         event.isCancelled = true
         event.player.showTitle(Title.title(
             Component.text(""),
             Component.text("${ChatColor.RED}이 게임에서는 포탈을 이용할 수 없어요!")
         ))
+        */
     }
 }
