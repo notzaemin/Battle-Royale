@@ -4,4 +4,3 @@ api-version: $pluginApiVersion
 main: $pluginMain
 libraries:
   - io.github.monun:kommand-core:$kommandVersion
-  - io.github.monun:invfx:$invfxVersion

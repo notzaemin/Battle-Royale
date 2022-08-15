@@ -1,6 +1,6 @@
-$Version = "1.18.2"
+$Version = "1.19.1"
 $Plugins = (
-    "https://github.com/monun/auto-reloader/releases/latest/download/AutoReloader.jar"
+    "https://github.com/monun/auto-reloader/releases/download/0.0.2/AutoReloader.jar"
 )
 $Xms = "1G"
 $Xmx = "1G"
