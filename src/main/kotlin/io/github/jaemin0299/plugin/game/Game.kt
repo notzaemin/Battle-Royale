@@ -77,7 +77,10 @@ class Game(
         progress = Progress.Ongoing
         val worldBorder = plugin.server.getWorld("world")?.worldBorder
         worldSetup()
+        var delay = 5L
         playerList.forEach {
+            kills[it.uniqueId] = 0
+            it.gameMode = GameMode.SURVIVAL
             plugin.server.scheduler.runTaskLater(plugin, Runnable {
                 val randomX = Random.nextInt(-480, 480)
                 val randomZ = Random.nextInt(-480, 480)
@@ -86,9 +89,8 @@ class Game(
                     it.world.getHighestBlockYAt(randomX, randomZ).toDouble() + 1,
                     randomZ.toDouble()
                 ))
-            }, 0)
-            kills[it.uniqueId] = 0
-            it.gameMode = GameMode.SURVIVAL
+            }, delay)
+            delay += 5L
         }
         broadcastTitle("${ChatColor.GREEN}GAME START!", "다른 생존자들보다 오래 생존하세요!")
         plugin.server.scheduler.runTaskTimer(plugin, Runnable {
