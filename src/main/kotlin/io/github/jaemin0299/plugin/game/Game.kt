@@ -71,7 +71,8 @@ class Game(
         world?.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, false)
         world?.setGameRule(GameRule.DO_MOB_SPAWNING, false)
         world?.time = 1000
-        world?.difficulty = Difficulty.EASY
+        if (progress == Progress.Ongoing) world?.difficulty = Difficulty.EASY
+        else world?.difficulty = Difficulty.PEACEFUL
     }
     fun start() {
         progress = Progress.Ongoing
