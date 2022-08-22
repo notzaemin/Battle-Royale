@@ -67,7 +67,7 @@ class Game(
         val world = plugin.server.getWorld("world")
         val worldBorder = world?.worldBorder
         worldBorder?.setCenter(0.5 , 0.5)
-        worldBorder?.size = 1000.0
+        worldBorder?.size = 1500.0
         world?.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, false)
         world?.setGameRule(GameRule.DO_MOB_SPAWNING, false)
         world?.time = 1000
